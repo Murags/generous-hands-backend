@@ -19,7 +19,7 @@ jobs:
             cd /var/www/projects/generoushands/api
             git pull origin main
 
-            # Create .env file if it doesn't exist
+            # Create .env file if it doesn't exis
             if [ ! -f .env ]; then
               echo "DATABASE_URL=postgresql+asyncpg://generous_user:generous_pass@db:5432/generoushands" > .env
             fi
