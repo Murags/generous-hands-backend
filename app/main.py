@@ -7,4 +7,9 @@ app = FastAPI()
 def root():
     return {"message": "Welcome to GenerousHands API"}
 
+@app.get("/health")
+def health_check():
+    return {"status": "healthy"}
+
+
 app.include_router(donation_router, prefix="/donations", tags=["Donations"])
